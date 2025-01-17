@@ -1,0 +1,46 @@
+@use "src/global/styles/breakpoints" as *;
+
+.app {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 80px;
+  min-height: 100vh;
+}
+
+.placeholder {
+  align-items: center;
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 4px;
+  box-shadow: var(--shadow-elevation-low);
+  box-sizing: border-box;
+  color: var(--color-gray-300);
+  display: flex;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-size: 0.925em;
+  justify-content: center;
+  padding: 1em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  grid-area: content;
+  justify-content: space-between;
+  padding: 0 1em;
+
+  @include breakpoints(from-md) {
+    flex-direction: row;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  margin: 1em;
+}

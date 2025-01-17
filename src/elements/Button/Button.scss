@@ -1,0 +1,47 @@
+.button {
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-weight: 500;
+  justify-content: space-between;
+  text-align: center;
+  width: auto;
+}
+
+.button--sm {
+  font-size: 14px;
+  padding: 0.5em .8em;
+}
+
+.button--md {
+  font-size: 16px;
+  padding: 0.65em .85em;
+}
+
+.button--lg {
+  font-size: 18px;
+  padding: 0.6em 0.9em;
+}
+
+.button--filled {
+  background: var(--color-brand);
+  border:1px solid var(--color-brand);
+  color: #fff;
+
+  &:hover {
+    background: var(--color-brand-dark);
+  }
+}
+
+.button--outline {
+  background: #fff;
+  border: 1px solid var(--color-brand);
+  color: var(--color-brand);
+
+  &:hover {
+    background: var(--color-blue-50);
+  }
+}

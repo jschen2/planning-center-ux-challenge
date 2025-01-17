@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body, html {
+  color: var(--color-gray-800);
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+ol, ul {
+  list-style: none;
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "declaration-block-no-redundant-longhand-properties": null,
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": null,
+    "media-feature-range-notation": null,
+    "property-no-vendor-prefix": null
+  }
+}

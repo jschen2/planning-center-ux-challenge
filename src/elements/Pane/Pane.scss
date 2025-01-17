@@ -1,0 +1,41 @@
+@use "src/global/styles/breakpoints" as *;
+
+.pane {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 4px;
+  box-shadow: var(--shadow-elevation-medium);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  
+  @include breakpoints(from-md) {
+    &.pane--sm {
+      max-width: 400px;
+    }
+
+    &.pane--md {
+      max-width: 520px;
+    }
+
+    &.pane--lg {
+      max-width: 760px;
+    }
+  }
+
+  .pane--header {
+    background: var(--color-gray-100);
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: 1em;
+
+    h2 {
+      color: var(--color-gray-600);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .pane--content {
+    padding: 1em;
+  }
+}

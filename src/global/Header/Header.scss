@@ -1,0 +1,28 @@
+.header {
+  align-items: center;
+  background: var(--color-brand);
+  border-radius: 4px;
+  box-shadow: var(--shadow-elevation-low);
+  box-sizing: border-box;
+  display: flex;
+  grid-area: header;
+  height: 60px;
+  justify-content: flex-start;
+  margin: 1em;
+  padding: 1em;
+  
+  h1 {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+
+    svg {
+      height: 30px;
+      margin-right: 8px;
+      width: 30px;
+    }
+  }
+}

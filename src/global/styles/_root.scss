@@ -1,0 +1,94 @@
+:root {
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  --color-gray-950: #020617;
+
+  --color-yellow-50: #fefce8;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-200: #fef08a;
+  --color-yellow-300: #fde047;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+  --color-yellow-700: #a16207;
+  --color-yellow-800: #854d0e;
+  --color-yellow-900: #713f12;
+  --color-yellow-950: #422006;
+
+  --color-blue-50: #f0f9ff;
+  --color-blue-100: #e0f2fe;
+  --color-blue-200: #bae6fd;
+  --color-blue-300: #7dd3fc;
+  --color-blue-400: #38bdf8;
+  --color-blue-500: #0ea5e9;
+  --color-blue-600: #0284c7;
+  --color-blue-700: #0369a1;
+  --color-blue-800: #075985;
+  --color-blue-900: #0c4a6e;
+  --color-blue-950: #082f49;
+
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+
+  --color-brand-lighter: var(--color-blue-400);
+  --color-brand-light: var(--color-blue-500);
+  --color-brand: var(--color-blue-600);
+  --color-brand-dark: var(--color-blue-700);
+  --color-brand-darker: var(--color-blue-800);
+
+  --color-warning-light: var(--color-yellow-200);
+  --color-warning: var(--color-yellow-300);
+  --color-warning-dark: var(--color-yellow-400);
+
+  --color-error-light: var(--color-red-400);
+  --color-error: var(--color-red-500);
+  --color-error-dark: var(--color-red-600);
+  
+  --color-success-light: var(--color-green-400);
+  --color-success: var(--color-green-500);
+  --color-success-dark: var(--color-green-600);
+
+  --shadow-color: 0deg 0% 65%;
+  --shadow-elevation-low: 
+    -0.2px 0.4px 0.4px hsl(var(--shadow-color) / 40%),
+    -0.3px 0.6px 0.6px -2px hsl(var(--shadow-color) / 30%),
+    -0.8px 1.5px 1.5px -4px hsl(var(--shadow-color) / 20%);
+  --shadow-elevation-medium: 
+    -0.2px 0.4px 0.4px hsl(var(--shadow-color) / 35%),
+    -0.4px 0.8px 0.8px -1px hsl(var(--shadow-color) / 30%),
+    -0.9px 1.6px 1.7px -2px hsl(var(--shadow-color) / 25%),
+    -2px 3.7px 3.8px -3px hsl(var(--shadow-color) / 20%),
+    -4.2px 7.7px 7.9px -4px hsl(var(--shadow-color) / 15%);
+
+  --input-border-radius: 4px;
+  --input-border-color: var(--color-gray-300);
+}
