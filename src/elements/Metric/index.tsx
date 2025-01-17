@@ -1,7 +1,7 @@
 import "./Metric.scss";
 import React from "react"
 
-export const Metric = ({ children }: {  children?: React.ReactNode }) => {
+export const Metric = ({ children }: { children?: React.ReactNode }) => {
   return <div className="metric">{children}</div>
 }
 

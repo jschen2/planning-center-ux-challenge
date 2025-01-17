@@ -1,1 +1,58 @@
-// add styles for "transactions"
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &:nth-child(2n) {
+    background: var(--color-gray-50);
+  }
+}
+
+.transaction--section {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.transaction--details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transaction--amount,
+.transaction--date {
+  text-align: right;
+}
+
+.transaction--description,
+.transaction--amount {
+  color: var(--color-gray-600);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.transaction--date,
+.transaction--category {
+  color: var(--color-gray-500);
+}
+
+.transaction--icon {
+  align-self: center;
+  background: var(--color-gray-200);
+  border-radius: 4px;
+  color: var(--color-gray-400);
+  display: flex;
+  padding: 0.5rem;
+
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}

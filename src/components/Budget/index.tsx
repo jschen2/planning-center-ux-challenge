@@ -8,6 +8,7 @@ import { useState } from "react"
 import { IconType } from "react-icons/lib"
 import { Input } from "../../elements/Input"
 import { Card, CardDetails, CardIcon, CardList } from "../../elements/Card"
+import { currencyFormatter } from "../../utils/currencyFormatter"
 
 export interface BudgetCategory {
   icon: string;
@@ -42,12 +43,6 @@ const radioIcons = [
 
 type RadioIcon = typeof radioIcons[number];
 
-const formatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  trailingZeroDisplay: "stripIfInteger"
-});
-
 const AddCategory = ({ onCancel, onAddCategory } : {
   onCancel: () => void,
   onAddCategory: (newCategory: BudgetCategory) => void,
@@ -72,7 +67,7 @@ const AddCategory = ({ onCancel, onAddCategory } : {
           <span>Icons</span>
           <div className="radio-icons">
             {radioIcons.map((icon: RadioIcon) => {
-              const Icon = (icons as Record<string, IconType>)[icon]
+              const Icon = (icons as Record<string, IconType>)[icon];
               return (
                 <div className="radio-icon">
                   <input
@@ -130,6 +125,26 @@ export const Budget = () => {
       icon: "Transportation",
       title: "Transportation",
       value: 400
+    },
+    {
+      icon: "Housing",
+      title: "Housing",
+      value: 1500
+    },
+    {
+      icon: "Food",
+      title: "Food",
+      value: 500
+    },
+    {
+      icon: "DiningOut",
+      title: "DiningOut",
+      value: 500
+    },
+    {
+      icon: "HealthFitness",
+      title: "HealthFitness",
+      value: 200
     }
   ]);
 
@@ -158,7 +173,7 @@ export const Budget = () => {
           return (
             <Metric key={key}>
               <MetricTitle>{metric.title}</MetricTitle>
-              <MetricValue>{formatter.format(metric.value)}</MetricValue>
+              <MetricValue>{currencyFormatter().format(metric.value)}</MetricValue>
             </Metric>
           )
         })}
@@ -175,7 +190,7 @@ export const Budget = () => {
               </CardIcon>
               <CardDetails className="card--category">
                 <h2>{title}</h2>
-                <span>{formatter.format(value)}</span>
+                <span>{currencyFormatter().format(value)}</span>
               </CardDetails>
             </Card>
           )

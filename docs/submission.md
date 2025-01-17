@@ -10,6 +10,8 @@ for refactoring the form use a React server function.
 The card list was also made navigable and aria-labels added for the card type and card number for a screen reader.
 
 ### Task 2: Build UI based on wireframe
+Create `Metric` component to use on the top portion of `Budget`.
+
 Pulled out the card elements from `Wallet` to mostly reuse in `Budget`.
 
 `AddCategory` added as separate component to encapsulate the state and only cause updates on the parent `Budget` when

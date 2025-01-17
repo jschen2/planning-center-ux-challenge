@@ -1,6 +1,15 @@
 // https://react-icons.github.io/react-icons/
 
-import { FaMoneyBill1, FaCarSide, FaCreditCard, FaHouse } from "react-icons/fa6"
+import {
+  FaBolt,
+  FaMoneyBill1,
+  FaCarSide,
+  FaCreditCard,
+  FaHouse,
+  FaPlaneDeparture,
+  FaTicket,
+  FaSackDollar
+} from "react-icons/fa6"
 import {
   IoWalletOutline,
   IoWallet,
@@ -10,8 +19,10 @@ import {
 import { BsBarChartLine, BsBarChartLineFill } from "react-icons/bs"
 import { MdFitnessCenter, MdLocalDining } from "react-icons/md"
 import { TbChefHat } from "react-icons/tb"
+import { VscSymbolMisc } from "react-icons/vsc";
 
 export {
+  FaBolt as Utilities,
   FaCreditCard as CreditCard,
   FaCarSide as Transportation,
   FaMoneyBill1 as DebitCard,
@@ -25,4 +36,8 @@ export {
   MdFitnessCenter as HealthFitness,
   MdLocalDining as DiningOut,
   TbChefHat as Food,
+  FaTicket as Entertainment,
+  FaPlaneDeparture as Travel,
+  FaSackDollar as Income,
+  VscSymbolMisc as Miscellaneous
 }
