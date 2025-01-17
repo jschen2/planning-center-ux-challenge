@@ -30,6 +30,9 @@ numbers on the right.
 
 
 ### Notes:
+`eslint` changed to a flat format the config was adjusted to match the version that was being installed. The prettier
+config was also added along with a11y recommended config to ensure accessibility rules are focused on at all times.
+
 I would imagine for the `Budget` that the idea is that the limits would add up for the `Allocated` and then be subtracted
 from the `Monthly Income` to make up the `Remaining`. If this was the case, I would hook this sequence up to make it
 functional, but I wasn't entirely sure if this was the case or if the numbers would be grabbed from somewhere else so
