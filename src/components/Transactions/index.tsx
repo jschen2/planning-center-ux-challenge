@@ -13,13 +13,13 @@ export const Transactions = () => {
   const balance = calculateBalance(startingBalance)
 
   return (
-    <Pane size="lg" title="Transactions">
+    <Pane size="md" title="Transactions">
       <div className="transactions">
         <Metric>
           <MetricTitle>Balance</MetricTitle>
           <MetricValue>{currencyFormatter().format(balance)}</MetricValue>
         </Metric>
-        <div className="transactions--list">
+        <ul className="transactions--list">
           {transactions.map((transaction, index) => {
             const Icon = (icons as Record<string, IconType>)[
               transaction.category
@@ -28,7 +28,7 @@ export const Transactions = () => {
                 .join("")
               ] || "div";
             return (
-              <div className="transaction" key={index}>
+              <li className="transaction" key={index}>
                 <div className="transaction--section">
                   <div className="transaction--icon">
                     <Icon />
@@ -42,10 +42,10 @@ export const Transactions = () => {
                   <div className="transaction--amount">{currencyFormatter(true).format(transaction.amount)}</div>
                   <div className="transaction--date">{dateFormat(transaction.date)}</div>
                 </div>
-              </div>
+              </li>
             )
           })}
-        </div>
+        </ul>
       </div>
     </Pane>
   )

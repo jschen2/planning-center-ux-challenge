@@ -1,14 +1,6 @@
-import { ChangeEvent } from "react"
+import { HTMLProps } from "react"
 
 import "./Input.scss"
-
-type InputProps = {
-  id: string
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void
-  placeholder?: string
-  type?: "text" | "number"
-  value: string
-}
 
 export const Input = ({
   id,
@@ -16,7 +8,8 @@ export const Input = ({
   placeholder = "",
   type = "text",
   value,
-}: InputProps) => {
+  ...props
+}: HTMLProps<HTMLInputElement>) => {
   return (
     <input
       className="input"
@@ -25,6 +18,7 @@ export const Input = ({
       placeholder={placeholder}
       type={type}
       value={value}
+      {...props}
     />
   )
 }

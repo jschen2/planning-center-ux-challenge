@@ -4,13 +4,14 @@ For each task, please give a brief description of your process, your reasoning u
 ### Task 1: Update form accessibility
 
 The card type buttons were changed to become two radio inputs to allow for default accessibility and for full usage
-as a form due to all being form elements (e.g. using the form action instead of a fetch call). This could also allow
-for refactoring the form use a React server function.
+as a form due to all now being form elements (e.g. using the form action instead of a fetch call). This could also
+allow for refactoring the form use a React server function if desired at some point.
 
-The card list was also made navigable and aria-labels added for the card type and card number for a screen reader.
+The card list was also made navigable and aria-labels added for the card type and card number for a screen reader. All
+inputs were also given their `for` attributes to properly label them.
 
 ### Task 2: Build UI based on wireframe
-Create `Metric` component to use on the top portion of `Budget`.
+Created `Metric` component to use on the top portion of `Budget`.
 
 Pulled out the card elements from `Wallet` to mostly reuse in `Budget`.
 
@@ -19,11 +20,21 @@ the user clicks the `Add new category` button.
 
 Reused similar radio input logic to the one in `Wallet` to allow easy selection of the icon for the new categories.
 
-Colors used from `_root.scss`.
+Colors used from `_root.scss` to maintain theme.
 
 ### Task 3: Refactor to add visual hierarchy
-<!-- add task description here -->
+Since this is could be a fairly large list of non-interactive data, the card styling was adjusted a bit to reflect that
+and remove a little of the business with the extra card styling. The rest of the patterns were: category icon on the
+left, two lines of data with the second line being more subdued as they are extra information, and text on the left with
+numbers on the right.
 
 
 ### Notes:
-<!-- space to ask questions or provide any additional details while going through this process -->
+I would imagine for the `Budget` that the idea is that the limits would add up for the `Allocated` and then be subtracted
+from the `Monthly Income` to make up the `Remaining`. If this was the case, I would hook this sequence up to make it
+functional, but I wasn't entirely sure if this was the case or if the numbers would be grabbed from somewhere else so
+they were left as static.
+
+If the `Transactions` list would get reused somewhere else, I would create separate components to allow this to be reused
+much in the same vein of the `Card` component. Since it isn't at the moment and can be considered specific to the
+`Transactions` view, I have left them tied to that view.

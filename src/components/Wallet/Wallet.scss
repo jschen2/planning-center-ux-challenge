@@ -22,55 +22,45 @@
   }
 }
 
-.card-type {
-  align-items: center;
-  justify-content: space-between;
+.card-form--fieldset {
+  display: contents;
+}
+
+.card-type--options {
+  box-sizing: border-box;
   display: flex;
-  margin: 1em 0;
-  width: 100%;
 
-  p {
-    color: var(--color-gray-600);
-    margin-bottom: 0.5em;
-  }
-
-  .card-type--options {
+  .card-type--option {
     box-sizing: border-box;
     display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
+    font-size: 16px;
 
-    .card-type--option {
-      box-sizing: border-box;
-      display: flex;
+    & > label {
+      background: var(--color-gray-200);
+      border: none;
+      color: var(--color-gray-500);
+      cursor: pointer;
+      padding: 0.5em 0.75em;
+      position: relative;
+    }
 
-      & > label {
-        background: var(--color-gray-200);
-        border: none;
-        color: var(--color-gray-500);
-        cursor: pointer;
-        padding: 0.5em 0.75em;
-        position: relative;
-      }
+    &:first-child > label {
+      border-radius: 8px 0 0 8px;
+    }
 
-      &:first-child > label {
-        border-radius: 8px 0 0 8px;
-      }
+    &:last-child > label {
+      border-radius: 0 8px 8px 0;
+    }
 
-      &:last-child > label {
-        border-radius: 0 8px 8px 0;
-      }
+    & > input[type="radio"]:checked + label {
+      background: var(--color-green-600);
+      color: #fff;
+    }
 
-      & > input[type="radio"]:checked + label {
-        background: var(--color-green-600);
-        color: #fff;
-      }
-
-      & > input[type="radio"]:focus-visible + label, {
-        outline: 2px solid indianred;
-        outline: 2px solid -webkit-focus-ring-color;
-        z-index: 1;
-      }
+    & > input[type="radio"]:focus-visible + label, {
+      outline: 2px solid indianred;
+      outline: 2px solid -webkit-focus-ring-color;
+      z-index: 1;
     }
   }
 }

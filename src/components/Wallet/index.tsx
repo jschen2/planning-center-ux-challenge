@@ -25,12 +25,13 @@ export const Wallet = () => {
   }
 
   return (
-    <Pane size="sm" title="My Wallet">
+    <Pane size="md" title="My Wallet">
       <div className="card-form">
         <div className="card-form--row">
-          <label>Card Number:</label>
+          <label htmlFor="card-number">Card Number:</label>
           <Input
-            id="name"
+            id="card-number"
+            name="card-number"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setNumber(e.target.value)
             }
@@ -41,9 +42,10 @@ export const Wallet = () => {
         </div>
 
         <div className="card-form--row">
-          <label>CVC:</label>
+          <label htmlFor="cvc">CVC:</label>
           <Input
             id="cvc"
+            name="cvc"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setCvc(e.target.value)
             }
@@ -54,9 +56,10 @@ export const Wallet = () => {
         </div>
 
         <div className="card-form--row">
-          <label>Expiration:</label>
+          <label htmlFor="expiration">Expiration:</label>
           <Input
             id="expiration"
+            name="expiration"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setExpiration(e.target.value)
             }
@@ -66,42 +69,44 @@ export const Wallet = () => {
           />
         </div>
 
-        <div className="card-type">
-          <p>Card Type:</p>
-          <div className="card-type--options">
-            <div className="card-type--option">
-              <input
-                className="sr-only"
-                type="radio"
-                id="credit"
-                name="card-type"
-                value="credit"
-                checked={type === "credit"}
-                onChange={() => setType("credit")}
-              />
-              <label htmlFor="credit" onClick={() => setType("credit")}>
-                Credit
-              </label>
-            </div>
-            <div className="card-type--option">
-              <input
-                className="sr-only"
-                type="radio"
-                id="debit"
-                name="card-type"
-                value="debit"
-                checked={type === "debit"}
-                onChange={() => setType("debit")}
-              />
-              <label
-                htmlFor="debit"
-                onClick={() => setType("debit")}
-              >
-                Debit
-              </label>
+        <fieldset className="card-form--fieldset">
+          <div className="card-form--row">
+            <legend>Card Type:</legend>
+            <div className="card-type--options">
+              <div className="card-type--option">
+                <input
+                  className="sr-only"
+                  type="radio"
+                  id="credit"
+                  name="card-type"
+                  value="credit"
+                  checked={type === "credit"}
+                  onChange={() => setType("credit")}
+                />
+                <label htmlFor="credit" onClick={() => setType("credit")}>
+                  Credit
+                </label>
+              </div>
+              <div className="card-type--option">
+                <input
+                  className="sr-only"
+                  type="radio"
+                  id="debit"
+                  name="card-type"
+                  value="debit"
+                  checked={type === "debit"}
+                  onChange={() => setType("debit")}
+                />
+                <label
+                  htmlFor="debit"
+                  onClick={() => setType("debit")}
+                >
+                  Debit
+                </label>
+              </div>
             </div>
           </div>
-        </div>
+        </fieldset>
         <Button onClick={handleAddCard} text="Add Card" />
       </div>
 
