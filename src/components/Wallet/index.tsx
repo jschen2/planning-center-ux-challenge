@@ -4,16 +4,17 @@ import { Pane } from "../../elements/Pane"
 import { Button } from "../../elements/Button"
 import { Input } from "../../elements/Input"
 import { CreditCard, DebitCard } from "../../icons"
-import type { Card } from "../../types"
+import type { PaymentCard } from "../../types"
 
 import "./Wallet.scss"
+import { Card, CardDetails, CardIcon, CardList, CardNumber } from "../../elements/Card"
 
 export const Wallet = () => {
   const { cards, addCard } = useCards()
   const [number, setNumber] = useState("")
   const [cvc, setCvc] = useState("")
   const [expiration, setExpiration] = useState("")
-  const [type, setType] = useState<Card["type"]>("credit")
+  const [type, setType] = useState<PaymentCard["type"]>("credit")
 
   const handleAddCard = () => {
     addCard({ type, number, cvc, expiration })
@@ -104,25 +105,26 @@ export const Wallet = () => {
         <Button onClick={handleAddCard} text="Add Card" />
       </div>
 
-      <ul className="cards-list" role="list">
+      <CardList>
         {cards.map((card, index) => {
+          const key = `${card.number}-${index}`;
           return (
-            <li className="card" key={index} role="list-item" tabIndex={0} aria-label={`${card.type} card ${card.number}`}>
-              <div className="card--icon">
+            <Card key={key} aria-label={`${card.type} card ${card.number}`}>
+              <CardIcon>
                 {card.type === "credit" ? <CreditCard /> : <DebitCard />}
-              </div>
+              </CardIcon>
 
-              <div className="card--details">
-                <h2 className="card--number">{card.number}</h2>
+              <CardDetails>
+                <CardNumber>{card.number}</CardNumber>
                 <div className="flex">
                   <p className="card--cvc">{card.cvc}</p>
                   <p className="card--expiration">{card.expiration}</p>
                 </div>
-              </div>
-            </li>
+              </CardDetails>
+            </Card>
           )
         })}
-      </ul>
+      </CardList>
     </Pane>
   )
 }

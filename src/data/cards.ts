@@ -1,6 +1,6 @@
-import type { Card } from "../types"
+import type { PaymentCard } from "../types"
 
-export const cards: Card[] = [
+export const cards: PaymentCard[] = [
   {
     type: "credit",
     number: "1111 2222 3333 4444",

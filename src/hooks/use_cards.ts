@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 import { useDataContext } from "./use_data_context"
 import { cards as initialCards } from "../data/cards"
-import type { Card } from "../types"
+import type { PaymentCard } from "../types"
 
-type CardsState = { cards: Card[] }
+type CardsState = { cards: PaymentCard[] }
 
 export const useCards = () => {
   const { data, setData } = useDataContext<CardsState>()
@@ -17,7 +17,7 @@ export const useCards = () => {
     }
   }, [data.cards, setData])
 
-  const addCard = (card: Card) => {
+  const addCard = (card: PaymentCard) => {
     setData((prevData) => ({
       ...prevData,
       cards: [...prevData.cards, card],

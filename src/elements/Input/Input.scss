@@ -9,3 +9,13 @@
 .input::placeholder {
   color: var(--color-gray-400);
 }
+
+.input--top-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  & > span {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,15 @@
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-weight: bold;
+  font-size: 2rem;
+}

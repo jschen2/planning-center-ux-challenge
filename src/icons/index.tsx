@@ -5,7 +5,7 @@ import {
   IoWalletOutline,
   IoWallet,
   IoReaderOutline,
-  IoReader,
+  IoReader
 } from "react-icons/io5"
 import { BsBarChartLine, BsBarChartLineFill } from "react-icons/bs"
 import { MdFitnessCenter, MdLocalDining } from "react-icons/md"

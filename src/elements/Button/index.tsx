@@ -3,22 +3,23 @@ import { ReactNode } from "react"
 import "./Button.scss"
 
 type BaseButtonProps = {
-  onClick: () => void
-  size?: "sm" | "md" | "lg"
-  variant?: "filled" | "outline"
+  onClick: () => void;
+  size?: "sm" | "md" | "lg";
+  variant?: "filled" | "outline";
+  block?: boolean;
 }
 
 type TextButtonProps = BaseButtonProps & {
-  text: string
-  children?: never
+  text: string;
+  children?: never;
 }
 
 type ChildrenButtonProps = BaseButtonProps & {
-  children: ReactNode
-  text?: never
+  children: ReactNode;
+  text?: never;
 }
 
-type ButtonProps = TextButtonProps | ChildrenButtonProps
+type ButtonProps = TextButtonProps | ChildrenButtonProps;
 
 export const Button = ({
   children,
@@ -26,12 +27,13 @@ export const Button = ({
   size = "md",
   variant = "filled",
   text = "",
+  block,
   ...restProps
 }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`button button--${size} button--${variant}`}
+      className={`button button--${size} button--${variant}${block ? " button--block" : ""}`}
       {...restProps}
     >
       {text || children}

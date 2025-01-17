@@ -7,11 +7,17 @@ The card type buttons were changed to become two radio inputs to allow for defau
 as a form due to all being form elements (e.g. using the form action instead of a fetch call). This could also allow
 for refactoring the form use a React server function.
 
-The card list was also made navigable and labels added for the card type and card number.
+The card list was also made navigable and aria-labels added for the card type and card number for a screen reader.
 
 ### Task 2: Build UI based on wireframe
-<!-- add task description here -->
+Pulled out the card elements from `Wallet` to mostly reuse in `Budget`.
 
+`AddCategory` added as separate component to encapsulate the state and only cause updates on the parent `Budget` when
+the user clicks the `Add new category` button.
+
+Reused similar radio input logic to the one in `Wallet` to allow easy selection of the icon for the new categories.
+
+Colors used from `_root.scss`.
 
 ### Task 3: Refactor to add visual hierarchy
 <!-- add task description here -->

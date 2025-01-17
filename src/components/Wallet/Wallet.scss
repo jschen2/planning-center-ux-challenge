@@ -23,7 +23,11 @@
 }
 
 .card-type {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
   margin: 1em 0;
+  width: 100%;
 
   p {
     color: var(--color-gray-600);
@@ -33,10 +37,13 @@
   .card-type--options {
     box-sizing: border-box;
     display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
 
     .card-type--option {
       box-sizing: border-box;
       display: flex;
+
       & > label {
         background: var(--color-gray-200);
         border: none;
@@ -68,58 +75,15 @@
   }
 }
 
-.cards-list {
-  border-top: 1px solid var(--color-gray-200);
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1em;
-  padding: 1em 0;
-
-  .card {
-    background: #fff;
-    border: 1px solid var(--color-gray-200);
-    border-radius: 4px;
-    box-shadow: var(--shadow-elevation-low);
-    display: flex;
-    overflow: hidden;
-  }
-
-  .card--icon {
-    align-items: center;
-    background: var(--color-gray-100);
-    border-right: 1px solid var(--color-gray-200);
-    color: var(--color-gray-400);
-    display: flex;
-    justify-content: center;
-    padding: 0 0.75em;
-
-    svg {
-      display: block;
-      height: 24px;
-      width: 24px;
-    }
-  }
-
-  .card--details {
-    padding: 0.75em 1em;
-  }
-
-  .card--number {
-    color: var(--color-gray-700);
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-  }
-
-  .card--cvc {
-    color: var(--color-gray-400);
-    font-size: 14px;
-  }
-
-  .card--expiration {
-    color: var(--color-gray-400);
-    font-size: 14px;
-    margin-left: 0.5em;
-  }
+.card--cvc {
+  color: var(--color-gray-400);
+  font-size: 14px;
 }
+
+.card--expiration {
+  color: var(--color-gray-400);
+  font-size: 14px;
+  margin-left: 0.5em;
+}
+
+

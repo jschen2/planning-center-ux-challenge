@@ -1,4 +1,4 @@
-export type Card = {
+export type PaymentCard = {
   type: "credit" | "debit"
   number: string
   cvc: string
